@@ -6,7 +6,14 @@ import {
 } from '../utils/const';
 
 const initialState = {
-  tickers: [],
+  tickers: [
+    {ticker: {index: 'AAPL', name: 'Apple'}},
+    {ticker: {index: 'GOOGL', name: 'Google'}},
+    {ticker: {index: 'MSFT', name: 'Microsoft'}},
+    {ticker: {index: 'AMZN', name: 'Amazon'}},
+    {ticker: {index: 'FB', name: 'Facebook'}},
+    {ticker: {index: 'TSLA', name: 'Tesla'}},
+  ],
   status: {
     Apple: 'on',
     Google: 'on',

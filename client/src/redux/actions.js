@@ -5,7 +5,7 @@ import {
   SET_ON_OFF_STATUS,
 } from '../utils/const';
 
-export function setTickers(tickets) {
+export function setTickers({tickets}) {
   return {
     type: ADD_DATA_FROM_SERVER,
     data: tickets,
