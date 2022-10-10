@@ -36,12 +36,12 @@ export default function TickersPage() {
   if (loading) {
     return <Flex>LOADING...</Flex>;
   }
-
+console.log(tickers);
   return (
     <Flex width="800px" direction="column" align="center">
       <Flex justify="space-around" align="center" margin="20px 0">
         {tickers.map((ticker) => (
-          <TickerButton setRemove={setRemove} key={Date.now() * Math.random()}>
+          <TickerButton setRemove={setRemove} key={ticker.ticker.index}>
             {ticker.ticker.name}
           </TickerButton>
         ))}
@@ -50,14 +50,14 @@ export default function TickersPage() {
         {tickerResult.map((ticker, idx) =>
           idx % 2 === 0 ? (
             <TickersItem
-              key={Date.now() * Math.random()}
+              key={ticker.ticker.index}
               ticker={ticker}
               background="lightgray"
               statusOnOf={status}
             />
           ) : (
             <TickersItem
-              key={Date.now() * Math.random()}
+              key={ticker.ticker.index}
               ticker={ticker}
               background="white"
               statusOnOf={status}
