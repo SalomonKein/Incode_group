@@ -12,7 +12,7 @@ export async function getTickets(EVENT, func) {
   socket.on(EVENT, func);
 }
 
-export function reconnectTickets(EVENT, func) {
+export function reconnectTickets() {
   socket.disconnect();
   socket.connect();
 }

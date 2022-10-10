@@ -22,7 +22,7 @@ const initialState = {
     Amazon: false,
     Facebook: false,
     Tesla: false,
-  }, 
+  },
 };
 
 export default function reducer(state = initialState, action) {
