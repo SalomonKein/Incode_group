@@ -17,7 +17,7 @@ const tickers = [
   {index: 'TSLA', name: 'Tesla'},
 ];
 function changeInterval(interval) {
-  FETCH_INTERVAL = interval;  
+  FETCH_INTERVAL = interval;
   // socketServer.on('disconnection')
 }
 
@@ -82,7 +82,7 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
-app.post('/', function (req, res) {  
+app.post('/', function (req, res) {
   changeInterval(req.body.choice);
   res.status(200).json(`Interval ${req.body.choice} is success`);
 });

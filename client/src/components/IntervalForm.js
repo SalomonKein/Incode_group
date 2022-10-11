@@ -20,7 +20,7 @@ export default function IntervalForm() {
   const dispatch = useDispatch();
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    axios.post(SERVER_URL, {choice}).then((response) => console.log(response));
+    axios.post(SERVER_URL, {choice});
     reconnectTickets('disconnect', function (response) {
       dispatch(setTickers(response));
     });

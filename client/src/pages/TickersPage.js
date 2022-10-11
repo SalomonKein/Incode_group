@@ -36,7 +36,6 @@ export default function TickersPage() {
   if (loading) {
     return <Flex>LOADING...</Flex>;
   }
-console.log(tickers);
   return (
     <Flex width="800px" direction="column" align="center">
       <Flex justify="space-around" align="center" margin="20px 0">
@@ -50,6 +49,7 @@ console.log(tickers);
         {tickerResult.map((ticker, idx) =>
           idx % 2 === 0 ? (
             <TickersItem
+              data-testid="toggle-elem"
               key={ticker.ticker.index}
               ticker={ticker}
               background="lightgray"
@@ -57,6 +57,7 @@ console.log(tickers);
             />
           ) : (
             <TickersItem
+              data-testid="toggle-elem"
               key={ticker.ticker.index}
               ticker={ticker}
               background="white"

@@ -17,7 +17,7 @@ export default function TickerButton(props) {
   };
 
   return (
-    <Button onClick={removeHandler} {...props}>
+    <Button onClick={removeHandler} {...props} data-testid="ticker-btn">
       {isRemove ? (
         <>
           <span>{index}</span>

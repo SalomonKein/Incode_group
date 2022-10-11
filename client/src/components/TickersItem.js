@@ -50,21 +50,27 @@ export default function TickersItem({ticker, background, statusOnOf}) {
         {ticker.ticker.index}
       </Item>
       <Item>{ticker.ticker.name}</Item>
-      <Item>{status === 'on' ? ticker.price : 0.0} $</Item>
-      <Item>{status === 'on' ? ticker.change : 0.0}</Item>
+      <Item data-testid="test-elem">
+        {status === 'on' ? ticker.price : '0.0'} $
+      </Item>
+      <Item data-testid="test-elem">
+        {status === 'on' ? ticker.change : '0.0'}
+      </Item>
       <Arrow arrow={status === 'on' ? arrow : 'none'} />
       <Item
+        data-testid="test-elem"
         margin="0 10px"
         background={status === 'on' ? currentBackground : 'none'}
         bRadius="5px"
       >
-        {status === 'on' ? ticker.change_percent : 0.0} %
+        {status === 'on' ? ticker.change_percent : '0.0'} %
       </Item>
       <Button
         width="6vw"
         height="25px"
         background="#0000CD"
         onClick={onOffHandler}
+        data-testid="on-off-btn"
       >
         {status}
       </Button>

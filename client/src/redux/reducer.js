@@ -1,6 +1,5 @@
 import {
   ADD_DATA_FROM_SERVER,
-  RECONNECT,
   REMOVE_INDEX,
   SET_ON_OFF_STATUS,
 } from '../utils/const';
@@ -50,12 +49,6 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         remove: action.data,
-      };
-    }
-    case RECONNECT: {
-      return {
-        ...state,
-        reconnect: action.data,
       };
     }
     default: {

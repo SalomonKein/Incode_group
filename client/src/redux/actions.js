@@ -1,6 +1,5 @@
 import {
   ADD_DATA_FROM_SERVER,
-  RECONNECT,
   REMOVE_INDEX,
   SET_ON_OFF_STATUS,
 } from '../utils/const';
@@ -22,13 +21,6 @@ export function setOnOffStatus(status) {
 export function removeIndex(boolean) {
   return {
     type: REMOVE_INDEX,
-    data: boolean,
-  };
-}
-
-export function reconnect(boolean) {
-  return {
-    type: RECONNECT,
     data: boolean,
   };
 }
